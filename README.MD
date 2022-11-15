@@ -5,7 +5,7 @@
 #
 ## Installation
 
-Install my-project with git
+Install CianAPi with git
 ```bash
   git clone https://github.com/NoneNameDeveloper/CianAPi
 ```

@@ -189,9 +189,6 @@ class CianApi:
 				"result": []
 			}
 
-		# title of searching
-		# title_ = soup.find("h1").text.strip()
-
 		main_adverts = soup.find("div", attrs = {"id": "frontend-serp"}).find("div").find("div", attrs = {"class":"_93444fe79c--wrapper--W0WqH"}).find_all("article", attrs = {"data-name": "CardComponent"})
 		u = 0
 		for ad in main_adverts:
@@ -325,8 +322,6 @@ class CianApi:
 		driver.get(url)
 
 		content = driver.page_source
-		
-		#driver.quit()
 
 		return content
 

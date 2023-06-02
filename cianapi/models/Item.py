@@ -15,4 +15,4 @@ class Item(BaseModel):
 	adress: str
 	seller: Seller
 	photos: list[str]
-	post_date = datetime
+	post_date: datetime

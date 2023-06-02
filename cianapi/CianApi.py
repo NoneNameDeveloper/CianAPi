@@ -16,72 +16,21 @@ class CianApi:
 	def __init__(self):
 		"""__init__ function"""
 
-		# authorization cookies
-		self.cookies = {
-			'_CIAN_GK': '4b4aff7e-fb50-4c52-9b9c-35732a09c330',
-			'login_mro_popup': '1',
-			'_gcl_au': '1.1.1300089357.1666600808',
-			'sopr_utm': '%7B%22utm_source%22%3A+%22direct%22%2C+%22utm_medium%22%3A+%22None%22%7D',
-			'sopr_session': 'c22aef1afce14b84',
-			'uxfb_usertype': 'searcher',
-			'tmr_lvid': 'f2840dee4ff9efb54d3173f30c7c3d89',
-			'tmr_lvidTS': '1666600807718',
-			'_ga': 'GA1.2.833930558.1666600808',
-			'_gid': 'GA1.2.1973130906.1666600808',
-			'_ym_uid': '1666600808446082172',
-			'_ym_d': '1666600808',
-			'_ym_isad': '2',
-			'_ym_visorc': 'b',
-			'_gpVisits': '{"isFirstVisitDomain":true,"todayD":"Mon%20Oct%2024%202022","idContainer":"10002511"}',
-			'afUserId': '248c1b66-fe9c-479e-baef-cad7986a985c-p',
-			'uxs_uid': '77860980-5377-11ed-ba61-2dc86c550b54',
-			'AF_SYNC': '1666600808988',
-			'adrdel': '1',
-			'adrcid': 'A1f7g0U7lPM1O35k0H4iUsg',
-			'cookie_agreement_accepted': '1',
-			'session_region_id': '1',
-			'session_main_town_region_id': '1',
-			'_gp10002511': '{"hits":3,"vc":1,"ac":1,"a6":1}',
-			'_cc_id': 'f0bc1831a1ad31f904c2665249be87ee',
-			'panoramaId_expiry': '1667206794838',
-			'panoramaId': 'a474a8b86a9cdab02875a8b5d46b16d53938f8b99a771ef5749a9bb39fe6cf7e',
-			'tmr_detect': '0%7C1666601624882',
-			'__cf_bm': 'yqj6H5VfkxeJPOL8qraMl3kaLj7HoHKAWKtDrYyWaQE-1666602085-0-AV6gIKBcj/ZEPceikyh0l2x5qRJWOdmKaNu/9YMGhs6baHbwSMpMhGa7KEBVWigANzHJ9ssfBssAYL2zx+xv6HA=',
-			'tmr_reqNum': '14',
-		}
-
-		self.headers = {
-			'authority': 'www.cian.ru',
-			'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
-			'accept-language': 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7',
-			'cache-control': 'max-age=0',
-			# Requests sorts cookies= alphabetically
-			# 'cookie': '_CIAN_GK=4b4aff7e-fb50-4c52-9b9c-35732a09c330; login_mro_popup=1; _gcl_au=1.1.1300089357.1666600808; sopr_utm=%7B%22utm_source%22%3A+%22direct%22%2C+%22utm_medium%22%3A+%22None%22%7D; sopr_session=c22aef1afce14b84; uxfb_usertype=searcher; tmr_lvid=f2840dee4ff9efb54d3173f30c7c3d89; tmr_lvidTS=1666600807718; _ga=GA1.2.833930558.1666600808; _gid=GA1.2.1973130906.1666600808; _ym_uid=1666600808446082172; _ym_d=1666600808; _ym_isad=2; _ym_visorc=b; _gpVisits={"isFirstVisitDomain":true,"todayD":"Mon%20Oct%2024%202022","idContainer":"10002511"}; afUserId=248c1b66-fe9c-479e-baef-cad7986a985c-p; uxs_uid=77860980-5377-11ed-ba61-2dc86c550b54; AF_SYNC=1666600808988; adrdel=1; adrcid=A1f7g0U7lPM1O35k0H4iUsg; cookie_agreement_accepted=1; session_region_id=1; session_main_town_region_id=1; _gp10002511={"hits":3,"vc":1,"ac":1,"a6":1}; _cc_id=f0bc1831a1ad31f904c2665249be87ee; panoramaId_expiry=1667206794838; panoramaId=a474a8b86a9cdab02875a8b5d46b16d53938f8b99a771ef5749a9bb39fe6cf7e; tmr_detect=0%7C1666601624882; __cf_bm=yqj6H5VfkxeJPOL8qraMl3kaLj7HoHKAWKtDrYyWaQE-1666602085-0-AV6gIKBcj/ZEPceikyh0l2x5qRJWOdmKaNu/9YMGhs6baHbwSMpMhGa7KEBVWigANzHJ9ssfBssAYL2zx+xv6HA=; tmr_reqNum=14',
-			'if-none-match': 'W/"24d405-xC3keC+RGp/cAQUOcXik+5JGVsQ"',
-			'sec-ch-ua': '"Chromium";v="106", "Google Chrome";v="106", "Not;A=Brand";v="99"',
-			'sec-ch-ua-mobile': '?0',
-			'sec-ch-ua-platform': '"Windows"',
-			'sec-fetch-dest': 'document',
-			'sec-fetch-mode': 'navigate',
-			'sec-fetch-site': 'none',
-			'sec-fetch-user': '?1',
-			'upgrade-insecure-requests': '1',
-			'user-agent': 'Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36',
-		}
-
-		self.type_dict_ = {
+		self._type_dict_: dict = {
 			"rent": "rent",
 			"buy": "sale"
 		}
 
-		self.building_type_dict_ = {
+		self._building_type_dict_: dict = {
 			"company": None,
 			"private": 1,
 			"": None,
 			None: None
 		}
 
-		self.link_api_ = "https://api.cian.ru"
+		self._link_api_: str = "https://api.cian.ru"
+
+		self.city: str = "Москва"
 
 	@staticmethod
 	def _initialize_driver() -> webdriver:
@@ -113,36 +62,38 @@ class CianApi:
 
 	def get_url_to_pars(
 			self,
-			type_: str = None,  # buy / rent
+			buy_type: str = None,  # buy / rent
 			building_type: str = None,  # company / private
-			location_id: int = 1,
+			location: str = "Москва",  # city
 			price_from: int = None,
 			price_to: int = None,
 	) -> str:
 		"""getting url for further getting items from cian
 
 		Args:
-			type_ (str, optional): buy / rent.
+			buy_type (str, optional): buy / rent.
 			building_type (str, optional): 
 				private - частная  /  company - компания. Defaults to None
 			
-			location_id (int, optional): CianApi.get_location_id() result. Defaults to 1.
+			location (str, optional): city name. Defaults to Москва.
 			price_from (int, optional): _description_. Defaults to None.
 			price_to (int, optional): _description_. Defaults to None.
 
 		Returns:
 			str: url for future parsing with pars_page()
 		"""
+		location_id: int = self._get_location_id(location)
+
 		# get request params
 		params = {
 			'currency': '2',
-			'deal_type': self.type_dict_.get(type_),
+			'deal_type': self._type_dict_.get(buy_type),
 			'engine_version': '2',
 			'maxprice': price_to,
 			'minprice': price_from,
 			'offer_type': 'flat',
 			'region': location_id,
-			'is_by_homeowner': self.building_type_dict_[building_type],
+			'is_by_homeowner': self._building_type_dict_[building_type],
 			'room1': '1',
 			'room2': '1',
 			'room3': '1',
@@ -154,8 +105,6 @@ class CianApi:
 
 		url = "https://www.cian.ru/cat.php"
 		url_to_parse_ = self._get_req_url(url, params)
-
-		print(f"Url to parse content: {url_to_parse_}")
 
 		return url_to_parse_
 
@@ -175,7 +124,7 @@ class CianApi:
 
 		return soup
 
-	def parse_page(self, url: str) -> dict:
+	def parse_page(self, url: str) -> list[Item]:
 		"""scraping html tags from html
 
 		Args:
@@ -298,7 +247,21 @@ class CianApi:
 
 		return result_
 
-	def get_location_id(self, keyword_: str) -> int:
+	def parse_items(
+			self,
+			buy_type: str = None,  # buy / rent
+			building_type: str = None,  # company / private
+			location: str = "Москва",  # city
+			price_from: int = None,
+			price_to: int = None,
+	) -> list[Item]:
+
+		# getting url to parsing
+		url_: str = self.get_url_to_pars(buy_type, building_type, location, price_from, price_to)
+
+		return self.parse_page(url_)
+
+	def _get_location_id(self, keyword_: str) -> int:
 		"""getting location id by user's input
 
 		Args:
@@ -317,7 +280,7 @@ class CianApi:
 			"source": "mainpage",
 		}
 
-		url = self._get_req_url(f"{self.link_api_}/geo-suggest/v2/suggest/", params)
+		url = self._get_req_url(f"{self._link_api_}/geo-suggest/v2/suggest/", params)
 
 		result = self._request_api(url)
 
